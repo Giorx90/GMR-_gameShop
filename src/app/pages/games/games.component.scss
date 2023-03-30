@@ -1,0 +1,108 @@
+.container {
+    width: 90%;
+    margin: 30px auto;
+    .buttons {
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        img {
+            height: 15px;
+        }
+    }
+    .buscador {
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px 0px;
+        input{
+                border-radius: 3px;
+                padding: 8px 30px;
+                border: 1px solid;
+        }
+    }
+}
+    
+.games-grid {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    & .game-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .game-img {
+            height: 200px;
+        }
+    }
+}
+
+.games-list {
+    align-content: center;
+    & .game-list {
+        border-bottom: 1px solid rgb(176, 175, 175);
+        padding: 20px 0px;
+        display: flex;
+        .game-img {
+            height: 100px;
+        }
+    }
+}
+
+
+.title {
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.price {
+    margin-top: 8px;
+}
+
+.price:after {
+    content: "€";
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.rating {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 8px;
+    img {
+        height: 10px;
+    }
+}
+
+.rating:after {
+    content:"/10";
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.stars__icon {
+    color: #dbb809;
+}
+
+
+
+.buscador {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0px;
+
+    input{
+        border-radius: 3px;
+        padding: 8px 30px;
+        border: 1px solid;
+    }
+}
+
+
+
+
+

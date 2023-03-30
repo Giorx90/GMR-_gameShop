@@ -1,0 +1,36 @@
+header {
+    padding: 10px 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 150px;
+    }
+
+    ul {
+        display: flex;
+        gap: 10px;
+        text-transform: uppercase;
+        padding-inline-start: 20px;
+
+            a {
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 0.8em;
+                border: 1px solid;
+                border-radius: 50px;
+                padding: 8px 30px;
+                color: #141010;
+                display: flex;
+                align-items: center;
+            }
+            a:hover {
+                color:#8c1097;
+                background-color: transparent;
+                border: 2px solid #8c1097;
+            }   
+              
+        }
+    }
