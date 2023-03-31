@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
-
-
+import { PipesModule } from './pipes/pipes.module';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
 import { FooterComponent } from './core/footer/footer.component';
@@ -15,6 +15,7 @@ import { LogoutComponent } from './pages/logout/logout.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,12 +29,14 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     LogoutComponent,
     RegisterComponent,
     CartComponent,
-    NotfoundComponent
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    PipesModule, 
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

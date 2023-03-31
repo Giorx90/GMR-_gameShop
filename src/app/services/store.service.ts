@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormateGame } from '../models/interfaces';
 
 
 @Injectable({
@@ -7,7 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class StoreService {
 
-  db_url: string = "http://localhost:3000/store"
+  store_url: string = "http://localhost:3000/store"
+
+  cart_url: string = "http://localhost:3000/cart"
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +26,15 @@ export class StoreService {
   }
 
   getGames() {
-    return this.http.get(this.db_url)
+    return this.http.get(this.store_url)
+  }
+
+  getGame(id:number){
+    return this.http.get(`${this.store_url}/${id}`)
+  }
+
+  cartGame(game: FormateGame){
+    return this.http.post(this.cart_url,game)
   }
 
 }

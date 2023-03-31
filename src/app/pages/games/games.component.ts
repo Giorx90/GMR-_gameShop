@@ -11,8 +11,13 @@ export class GamesComponent {
 
   games: FormateGame [] = [];
   grid: boolean = true;
+  filteredGames: FormateGame [] = [];
+  filter: string;
+  game!: FormateGame
 
-  constructor(private storeService:StoreService){}
+  constructor(private storeService:StoreService){
+    this.filter ="";
+  }
 
   ngOnInit(): void {
     this.storeService.getGames().subscribe((data:any)=>{    
@@ -26,6 +31,11 @@ export class GamesComponent {
 
   turntoList(){
     this.grid=false
+  }
+  
+  cartGame() {
+    this.storeService.cartGame(this.game).subscribe((data:any)=>{   
+    })
   }
 
 }
