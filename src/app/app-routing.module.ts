@@ -8,15 +8,17 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { GameComponent } from './pages/game/game.component';
+import { AuthGuard } from './guards/auth.guard';
+import { ConfirmExitGuard } from './guards/confirm-exit.guard';
 
 const routes: Routes = [
   { path: '', component: GamesComponent, pathMatch: 'full' },
   { path: 'game/:id', component: GameComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'register', component: RegisterComponent, canDeactivate: [ConfirmExitGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
   { path: 'cart', component: CartComponent },
-  { path: 'logout', component: LogoutComponent },
+  { path: 'logout', component: LogoutComponent, canActivate: [AuthGuard]},
   { path: '**', component: NotfoundComponent },
 ];
 

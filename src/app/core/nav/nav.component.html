@@ -5,19 +5,19 @@
             <a [routerLink]="['/']">Shop</a>
         </li>
         <li>
-            <a [routerLink]="['/login']">Login</a>
+            <a *ngIf="!user" [routerLink]="['/login']">Login</a>
         </li>
         <li>
-            <a [routerLink]="['/register']">Register</a>
+            <a *ngIf="!user" [routerLink]="['/register']">Register</a>
         </li>
         <li>
-            <a [routerLink]="['/profile']">Profile</a>
+            <a *ngIf="user" [routerLink]="['/profile']">Profile</a>
         </li>
         <li>
-            <a [routerLink]="['/cart']">Cart</a>
+            <a *ngIf="user" [routerLink]="['/cart']">Cart</a>
         </li>
         <li>
-            <a [routerLink]="['/logout']">Logout</a>
+            <a *ngIf="user" [routerLink]="['/logout']">Logout</a>
         </li>
     </ul>
 </header>

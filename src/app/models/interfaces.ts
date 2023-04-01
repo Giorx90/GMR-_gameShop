@@ -8,3 +8,11 @@ export interface FormateGame {
     rating: number,
     img: string
 }
+export interface FormateUser {
+    email: string,
+    password: string,
+    firstname: string, 
+    lastname: string, 
+    age: number, 
+    id: number
+}
