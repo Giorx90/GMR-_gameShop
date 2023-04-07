@@ -14,6 +14,8 @@ export class RegisterComponent {
   email: string = ""
   pwd: string = ""
   age: number = 0
+  cart: [] = []
+  games: [] = []
 
   constructor(private authService: AuthService, private router:Router){}
 
@@ -23,7 +25,9 @@ export class RegisterComponent {
       this.lastname,
       this.age,
       this.email,
-      this.pwd
+      this.pwd,
+      this.cart,
+      this.games
     ).subscribe(data=>{
       alert('usuario registrado')
       this.router.navigateByUrl("/")

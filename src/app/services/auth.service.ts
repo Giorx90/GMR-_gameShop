@@ -11,7 +11,7 @@ export class AuthService {
 
   constructor(private http: HttpClient, private cookies: CookieService) { }
 
-  register(firstname: string, lastname: string, age: number, email: string, pwd: string){
+  register(firstname: string, lastname: string, age: number, email: string, pwd: string, cart: [], games: []){
     return this.http.post("http://localhost:3000/users", 
     {
       firstname: firstname,
@@ -19,6 +19,8 @@ export class AuthService {
       age: age,
       email: email, 
       password: pwd,
+      cart: cart,
+      games: games
     })
   }
 

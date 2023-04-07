@@ -1,1 +1,40 @@
-<p>profile works!</p>
+<body>
+    <div class="data-box">
+        <h4>Personal data</h4>
+        <form>
+            <div class="user-box">
+                <label for="">First name: </label>
+                <label for="">{{user.firstname}}</label>
+            </div>
+            <div class="user-box">
+                <label for="">Last name: </label>
+                <label for="">{{user.lastname}}</label>
+            </div>
+            <div class="user-box">
+                <label for="">Email: </label>
+                <label for="">{{user.email}}</label>
+            </div>
+            <div class="user-box">
+                <label for="">Age: </label>
+                <label for="">{{user.age}}</label>
+            </div>
+            
+        </form>
+    </div>
+    <div class="games-box">
+        <h4>Games</h4>
+        <div class="game-box" *ngFor="let game of games">
+            <div routerLink="/game/{{game.id}}">
+                <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
+                <h4 class="title">{{game.title}}</h4>
+                <p class="price">{{game.price}}</p>
+                <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>  
+            </div>
+            <div>
+                <button (click)="deleteProfileGame()"><img src="../../../assets/images/cart.png" alt=""></button>
+            </div>
+        </div>
+
+    </div>
+</body>
+

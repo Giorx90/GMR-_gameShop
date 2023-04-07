@@ -10,7 +10,7 @@ export class StoreService {
 
   store_url: string = "http://localhost:3000/store"
 
-  cart_url: string = "http://localhost:3000/cart"
+  user_url: string = "http://localhost:3000/users"
 
   constructor(private http: HttpClient) { }
 
@@ -29,12 +29,36 @@ export class StoreService {
     return this.http.get(this.store_url)
   }
 
-  getGame(id:number){
-    return this.http.get(`${this.store_url}/${id}`)
+  getGame(gameId:number){
+    return this.http.get(`${this.store_url}/${gameId}`)
   }
 
-  cartGame(game: FormateGame){
-    return this.http.post(this.cart_url,game)
+  cartGame(game: FormateGame, userId:number){
+    return this.http.post(`${this.user_url}/${userId}?_embed=cart`, game) //función para pasar cosas de la store al carrito (no me va)
+  }
+
+  getCartGames(userId:number){
+    return this.http.get(`${this.user_url}/${userId}?cart`) //esta es la que te comentaba, que creo que no va bien tampcoo
+  }
+
+  deleteCartGame(userId:number, gameId: number){
+    return this.http.delete(`${this.user_url}/${userId}/cart/${gameId}`)
+  }
+  
+  deleteAllCartGames(userId:number){
+    return this.http.delete(`${this.user_url}/${userId}/cart`)
+  }
+
+  buyGame(game: FormateGame, userId:number){
+    return this.http.post(`${this.user_url}/${userId}/games`, game)
+  }
+
+  getProfileGames(userId:number){
+    return this.http.get(`${this.user_url}/${userId}?games`)
+  }
+  
+  deleteProfileGame(gameId: number, userId:number){
+    return this.http.delete(`${this.user_url}/${userId}/games/${gameId}`)
   }
 
 }

@@ -1,1 +1,47 @@
-<p>cart works!</p>
+<body>
+    <div class="cart-box" *ngFor="let game of games">
+        <div routerLink="/game/{{game.id}}">
+            <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
+            <h4 class="title">{{game.title}}</h4>
+            <p class="price">{{game.price}}</p>
+            <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>  
+        </div>
+        <div>
+            <button (click)="deleteCartGame()"><img src="../../../assets/images/cart.png" alt=""></button>
+        </div>
+    </div>
+    <div class="payment-box">
+        <h2>Payment</h2>
+        <div class="payment-box-cards"></div>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required>
+                <label for="">Name on card</label>
+            </div>
+            <div class="user-box">
+                <input type="number" name="" required>
+                <label for="">Credit card number</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" required>
+                <label for="">Exp date</label>
+            </div>
+            <div class="user-box">
+                <input type="number" name="" required>
+                <label for="">CVV</label>
+            </div>
+            
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Pay
+            </button>
+        </form>
+    </div>
+      
+
+
+
+</body>

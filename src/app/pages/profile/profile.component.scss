@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 750px;
+    width: auto;
+    margin:auto;
+    padding:auto;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+    .data-box {
+        background: rgba(0,0,0,.5);
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+        h4 {
+            font-size: 18px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+        .user-box {
+            label {
+                font-size: 18px;
+                color: #fff;
+                pointer-events: none;
+                transition: .5s;
+            }
+        }
+            
+    }
+    .games-box {
+        background: rgba(0,0,0,.5);
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+        h4 {
+            font-size: 18px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }           
+    }
+}
+    
+
+
