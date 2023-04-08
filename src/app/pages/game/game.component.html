@@ -1,10 +1,12 @@
 <div class="container">
-    <h4 class="title">{{game.title}}</h4>
-    <img src="{{game.img}}" alt="{{game.title}}">
-    <p class="platform">Platform: {{game.platform}}</p>
-    <p class="developer">Developer: {{game.developer}}</p>
-    <p class="price">Price: {{game.price}}</p>
-    <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>
-    <button><img src="../../../assets/images/cart.png" alt=""></button>
-    <button routerLink="/">Back</button>
+    <div class="game-card">
+        <h4 class="title">{{game.title}}</h4>
+        <img src="{{game.img}}" alt="{{game.title}}">
+        <p class="platform">Platform: {{game.platform}}</p>
+        <p class="developer">Developer: {{game.developer}}</p>
+        <p class="price">{{game.price}}</p>
+        <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>
+        <button><img src="../../../assets/images/cart.png" alt=""></button>
+        <button routerLink="/">Back</button>
+    </div>
 </div>

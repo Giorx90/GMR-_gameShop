@@ -13,7 +13,7 @@ export class RegisterComponent {
   lastname: string = ""
   email: string = ""
   pwd: string = ""
-  age: number = 0
+  age!: number 
   cart: [] = []
   games: [] = []
 

@@ -1,47 +1,49 @@
 <div class="container">
-    <div class = "buttons">
-        <div>
+    <div class="games-header">
+        <div class = "buttons">
             <button (click)="turntoGrid()"><img src="../../../assets/images/icon-grid.png" alt=""></button>
             <button (click)="turntoList()"><img src="../../../assets/images/icon-list.png" alt=""></button>
         </div>
-    </div>
-    
-    <div class="buscador">
-    <input type="text" placeholder="What are you looking for?" [(ngModel)]="filter">
-    </div>
-    
-    
-    <div *ngIf="grid; else list" class="games-grid">
-        <div class="game-grid" *ngFor="let game of games | filter: filter">
-            <div routerLink="/game/{{game.id}}">
-                <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
-                <h4 class="title">{{game.title}}</h4>
-                <p class="price">{{game.price}}</p>
-                <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>  
-            </div>
-            <div>
-                <button (click)="cartGame()"><img src="../../../assets/images/cart.png" alt=""></button>
-            </div>
+        <div class="buscador">
+            <input type="text" placeholder="What are you looking for?" [(ngModel)]="filter">
         </div>
     </div>
-    
-    <ng-template #list>
-    <div class="games-list">
-        <div class="game-list" *ngFor="let game of games | filter: filter">
-            <div routerLink="/game/{{game.id}}">
-                <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
-                <ul>
-                    <li class="title">{{game.title}}</li>
-                    <li class="price">{{game.price}}</li>
-                    <li class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</li>
-                </ul>
+      
+    <ng-scrollbar class="scrollbar">
+
+        <div *ngIf="grid; else list" class="games-grid">
+            <div class="game-grid" *ngFor="let game of games | filter: filter">
+                <div routerLink="/game/{{game.id}}">
+                    <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
+                    <h4 class="title">{{game.title}}</h4>
+                    <p class="price">{{game.price}}</p>
+                    <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>  
+                </div>
+                <div>
+                    <button (click)="cartGame()"><img src="../../../assets/images/cart.png" alt=""></button>
+                </div>
             </div>
-            <div>
-                <button (click)="cartGame()"><img src="../../../assets/images/cart.png" alt=""></button>
-            </div>
-            
         </div>
-    </div>
-    </ng-template>
-    
-    </div>
+        
+        <ng-template #list>
+        <div class="games-list">
+            <div class="game-list" *ngFor="let game of games | filter: filter">
+                <div routerLink="/game/{{game.id}}">
+                    <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
+                    <ul>
+                        <li class="title">{{game.title}}</li>
+                        <li class="price">{{game.price}}</li>
+                        <li class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</li>
+                    </ul>
+                </div>
+                <div>
+                    <button (click)="cartGame()"><img src="../../../assets/images/cart.png" alt=""></button>
+                </div>
+                
+            </div>
+        </div>
+        </ng-template>
+
+    </ng-scrollbar> 
+
+</div>

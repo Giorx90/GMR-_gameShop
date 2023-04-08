@@ -22,16 +22,14 @@
         </form>
     </div>
     <div class="games-box">
-        <h4>Games</h4>
         <div class="game-box" *ngFor="let game of games">
-            <div routerLink="/game/{{game.id}}">
+            <div class="game-data" routerLink="/game/{{game.id}}">
                 <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
                 <h4 class="title">{{game.title}}</h4>
-                <p class="price">{{game.price}}</p>
-                <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>  
             </div>
-            <div>
-                <button (click)="deleteProfileGame()"><img src="../../../assets/images/cart.png" alt=""></button>
+            <div class="game-button">
+                <button (click)="deleteProfileGame()">Delete</button>
+                <button type="">Download</button>
             </div>
         </div>
 

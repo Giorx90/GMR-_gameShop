@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { PipesModule } from './pipes/pipes.module';
 import { AppRoutingModule } from './app-routing.module';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
@@ -37,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     PipesModule, 
     FormsModule,
+    NgScrollbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
