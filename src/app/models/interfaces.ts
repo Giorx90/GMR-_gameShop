@@ -14,5 +14,7 @@ export interface FormateUser {
     firstname: string, 
     lastname: string, 
     age: number, 
+    cart: [],
+    games: [],
     id: number
 }

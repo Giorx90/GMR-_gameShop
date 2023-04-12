@@ -14,6 +14,7 @@ body {
         box-shadow: 0 15px 25px rgba(0,0,0,.6);
         border-radius: 10px;
         padding: 15px;
+        margin-top: 10px ;
         h4 {
             font-size: 18px;
             padding: 0;
@@ -65,10 +66,23 @@ body {
                 display: flex;
                 justify-content: space-around;
                 button{
-
+                    background-color: #550a5b;
+                    color: #fff;
                 }
+                button:hover {
+                    box-shadow: 0 0 5px #a116ad,
+                    0 0 25px #bd2fca,
+                    0 0 50px #ce95d3,
+                }    
+                
             }
-        }           
+            
+        }  
+        .game-box:hover {
+            box-shadow: 0 0 5px #a116ad,
+            0 0 25px #bd2fca,
+            0 0 50px #ce95d3,
+        }         
     }
 }
     

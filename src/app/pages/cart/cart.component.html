@@ -6,12 +6,15 @@
                 <ul>
                     <li class="title">{{game.title}}</li>
                     <li class="price">{{game.price}}</li>
-                    <li class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</li>
                 </ul>
             </div>
             <div class="cart-game-button">
-                <button>Delete</button>
+                <button (click)="deleteCartGame(game.id)">Delete</button>
             </div>
+        </div>
+        <div class="cart-total">
+            <p>Total amount</p>
+            <p class="cart-total-€">{{total}}</p>
         </div>
     </div>
     
@@ -36,7 +39,7 @@
                 <label for="">CVV</label>
             </div>
             
-            <button>
+            <button (click)="pay()">
                 <span></span>
                 <span></span>
                 <span></span>

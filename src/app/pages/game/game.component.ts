@@ -30,9 +30,9 @@ export class GameComponent {
   }
 
   cartGame() {
-    this.storeService.cartGame(this.game, this.user.id).subscribe((data:any)=>{
-      this.user.cart = [...data]   
-    })
+    // this.storeService.cartGame(this.game, this.user.id).subscribe((data:any)=>{
+    //   this.user.cart = [...data]   
+    // })
   }
 
 }

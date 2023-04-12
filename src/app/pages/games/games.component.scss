@@ -1,5 +1,5 @@
 .container {
-    height: 600px;
+    height: 450px;
     width: auto;
     margin:auto;
     padding:auto;
@@ -32,12 +32,16 @@
 }
     
 .games-grid {
+    margin-top: 20px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 30px;
     & .game-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         border: solid grey;
         border-radius: 10px;
         width: 175px;
@@ -45,7 +49,7 @@
         background: rgba(0,0,0,.5);
         color: #fff;
         text-align: center;
-        div {
+        .game-grid-card {
             margin-top: 10px;
             display: flex;
             flex-direction: column;
@@ -53,16 +57,24 @@
             .game-img {
                 height: 150px;
             }
+        }
+        .game-grid-button {
+            display: flex;
+            justify-content: center;
             button {
+                margin-bottom: 5px;
+                background-color: #550a5b;
+                color: #fff;
                 height: 20px;
-                width: 20px;
                 display: flex;
                 justify-content: center;
-                img {
-                    width: 15px;
-                }
             }
-        }        
+            button :hover {
+                box-shadow: 0 0 5px #a116ad,
+                            0 0 25px #bd2fca,
+                            0 0 50px #ce95d3,
+            }
+        }          
     }
     .game-grid:hover {
         box-shadow: 0 0 5px #a116ad,
@@ -72,6 +84,7 @@
 }
 
 .games-list {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -99,12 +112,15 @@
             }
             button {
                 height: 20px;
-                width: 20px;
+                background-color: #550a5b;
+                color: #fff;
                 display: flex;
                 justify-content: center;
-                img {
-                    width: 15px;
-                }
+            }
+            button :hover {
+                box-shadow: 0 0 5px #a116ad,
+                            0 0 25px #bd2fca,
+                            0 0 50px #ce95d3,
             }
         }
     }
@@ -169,7 +185,7 @@
 }
 
 .scrollbar {
-    height: 400px;
+    height: 350px;
     --scrollbar-border-radius: 7px;
     --scrollbar-padding: 10px;
     --scrollbar-track-color: rgb(176, 175, 175);

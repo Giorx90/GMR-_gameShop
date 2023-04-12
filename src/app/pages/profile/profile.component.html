@@ -29,7 +29,13 @@
             </div>
             <div class="game-button">
                 <button (click)="deleteProfileGame()">Delete</button>
-                <button type="">Download</button>
+                <div *ngIf="downloaded; else play">
+                    <button (click)="download()">Download</button>
+                </div>
+                <ng-template #play>
+                    <button>Play</button>
+                </ng-template>
+                
             </div>
         </div>
 

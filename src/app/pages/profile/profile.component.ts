@@ -13,6 +13,7 @@ export class ProfileComponent {
   games: FormateGame [] = []
   game! : FormateGame
   user: any = {}
+  downloaded: boolean = true
 
   constructor(private authService:AuthService, private storeService:StoreService){}
 
@@ -23,6 +24,10 @@ export class ProfileComponent {
       this.games = data.games
             
     })
+  }
+
+  download(){
+    this.downloaded=false
   }
 
   deleteProfileGame(){}

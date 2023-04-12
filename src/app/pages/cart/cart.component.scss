@@ -15,14 +15,15 @@ body {
         flex-wrap: nowrap;
         align-items: center;
         margin-top: 20px;
+        width: 60%;
         .cart-list {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border: solid grey;
             border-radius: 10px;
-            width: 50%;
-            height: 150px;
+            width: 95%;
+            height: 125px;
             background: rgba(0,0,0,.5);
             color: #fff;
             margin: 5px;
@@ -30,7 +31,7 @@ body {
             .cart-game {
                 padding-right: 20px;
                 display: flex;
-                img {
+                .game-img {
                     height: 100px;
                 }
                 ul {
@@ -38,10 +39,25 @@ body {
                 }
             }
             .cart-game-button {
+                margin-right: 15px;
                 height: 20px;
                 width: 20px;
                 display: flex;
                 justify-content: center;
+                button {
+                    background-color: #550a5b;
+                    color: #fff;
+                }
+            }
+            .cart-game-button :hover {
+                box-shadow: 0 0 5px #a116ad,
+                            0 0 25px #bd2fca,
+                            0 0 50px #ce95d3,
+            }
+            .cart-game:hover {
+                box-shadow: 0 0 5px #a116ad,
+                0 0 25px #bd2fca,
+                0 0 50px #ce95d3,
             }
         }
         background: rgba(0,0,0,.5);
@@ -58,7 +74,8 @@ body {
         box-shadow: 0 15px 25px rgba(0,0,0,.6);
         border-radius: 10px;
         margin-top: 20px;
-        width: 300px;
+        width: 35%;
+        padding: 15px;
         h2 {
             padding: 0;
             color: #fff;
@@ -235,4 +252,17 @@ body {
     content:"/10";
     font-size: 12px;
     font-weight: 300;
+}
+
+.cart-total {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    p {
+        margin-left: 15px;
+    }
+    .cart-total-€:after {
+        content: "€"
+    }
 }

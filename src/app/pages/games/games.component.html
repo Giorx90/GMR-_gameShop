@@ -13,15 +13,24 @@
 
         <div *ngIf="grid; else list" class="games-grid">
             <div class="game-grid" *ngFor="let game of games | filter: filter">
-                <div routerLink="/game/{{game.id}}">
+                <div class="game-grid-card" routerLink="/game/{{game.id}}">
                     <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
                     <h4 class="title">{{game.title}}</h4>
                     <p class="price">{{game.price}}</p>
                     <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>  
                 </div>
-                <div>
-                    <button (click)="cartGame()"><img src="../../../assets/images/cart.png" alt=""></button>
+                <div class="game-grid-button">
+                    <button (click)="cartGame(game.id)">Add to cart</button>
                 </div>
+                <!--
+                <div *nfIf="onprofile; else none" class="game-grid-button">
+                    <button (click)="cartGame()">Add to cart</button>
+                </div>
+                <ng-template #none>
+                    <div></div>
+                </ng-template>
+                -->
+                
             </div>
         </div>
         
@@ -37,7 +46,7 @@
                     </ul>
                 </div>
                 <div>
-                    <button (click)="cartGame()"><img src="../../../assets/images/cart.png" alt=""></button>
+                    <button (click)="cartGame(game.id)">Add to cart</button>
                 </div>
                 
             </div>

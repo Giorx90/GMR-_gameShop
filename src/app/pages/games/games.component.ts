@@ -12,9 +12,11 @@ export class GamesComponent {
 
   games: FormateGame [] = [];
   grid: boolean = true;
+  onprofile: boolean = false
   filteredGames: FormateGame [] = [];
   filter: string;
   game!: FormateGame
+  id!: number
   user: any = {}
 
   constructor(private storeService:StoreService, private authService: AuthService){
@@ -26,7 +28,11 @@ export class GamesComponent {
       this.games = [...data]
     })
 
-    this.user= this.authService.getUser()
+    this.user= this.authService.getUser() 
+    
+    // if (this.user.games.includes(this.game)){
+    //   this.onprofile = true
+    // }
     
   }
 
@@ -38,10 +44,12 @@ export class GamesComponent {
     this.grid=false
   }
   
-  cartGame() {
-    this.storeService.cartGame(this.game, this.user.id).subscribe((data:any)=>{
-      //this.user.cart = [this.user.cart, ...data]   
-    })
+  cartGame(id: number){
+    console.log(this.games[id-1])
+    console.log(this.user)
+      
+    this.storeService.addGameToCart(this.game, this.user)
+    
   }
 
 }
