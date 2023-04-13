@@ -1,6 +1,6 @@
 <body>
     <div class="cart-box">
-        <div class="cart-list" *ngFor="let game of games">
+        <div class="cart-list" *ngFor="let game of games; index as i">
             <div class="cart-game" routerLink="/game/{{game.id}}">
                 <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
                 <ul>
@@ -9,9 +9,10 @@
                 </ul>
             </div>
             <div class="cart-game-button">
-                <button (click)="deleteCartGame(game.id)">Delete</button>
+                <button (click)="deleteCartGame(i)">Delete</button>
             </div>
         </div>
+        
         <div class="cart-total">
             <p>Total amount</p>
             <p class="cart-total-€">{{total}}</p>

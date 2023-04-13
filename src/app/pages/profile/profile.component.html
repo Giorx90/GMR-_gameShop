@@ -22,13 +22,13 @@
         </form>
     </div>
     <div class="games-box">
-        <div class="game-box" *ngFor="let game of games">
+        <div class="game-box" *ngFor="let game of games; index as i">
             <div class="game-data" routerLink="/game/{{game.id}}">
                 <img class="game-img" src="{{game.img}}" alt="{{game.title}}">
                 <h4 class="title">{{game.title}}</h4>
             </div>
             <div class="game-button">
-                <button (click)="deleteProfileGame()">Delete</button>
+                <button (click)="deleteProfileGame(i)">Delete</button>
                 <div *ngIf="downloaded; else play">
                     <button (click)="download()">Download</button>
                 </div>

@@ -44,12 +44,12 @@ export class GamesComponent {
     this.grid=false
   }
   
-  cartGame(id: number){
-    console.log(this.games[id-1])
-    console.log(this.user)
-      
-    this.storeService.addGameToCart(this.game, this.user)
-    
+  cartGame(game:any){
+    this.storeService.getUserCart(this.user).subscribe((user:any)=>{
+      const cart = user.cart
+      cart.push(game)
+      this.storeService.addGameToCart(this.user, cart).subscribe((data:any)=>{
+      })
+    })
   }
-
 }

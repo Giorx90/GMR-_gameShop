@@ -29,10 +29,13 @@ export class GameComponent {
     this.user= this.authService.getUser()
   }
 
-  cartGame() {
-    // this.storeService.cartGame(this.game, this.user.id).subscribe((data:any)=>{
-    //   this.user.cart = [...data]   
-    // })
+  cartGame(game:any){
+    this.storeService.getUserCart(this.user).subscribe((user:any)=>{
+      const cart = user.cart
+      cart.push(game)
+      this.storeService.addGameToCart(this.user, cart).subscribe((data:any)=>{
+      })
+    })
   }
 
 }

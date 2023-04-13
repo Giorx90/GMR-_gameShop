@@ -30,6 +30,13 @@ export class ProfileComponent {
     this.downloaded=false
   }
 
-  deleteProfileGame(){}
+  deleteProfileGame(i: number){
+    this.storeService.getUserCart(this.user).subscribe((user:any)=>{
+      const games = user.games     
+      games.splice(i, 1)
+      this.storeService.deleteGameFromProfile(this.user, games).subscribe((data:any)=>{
+      })
+    })
+  }
 }
 

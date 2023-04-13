@@ -20,7 +20,7 @@
                     <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>  
                 </div>
                 <div class="game-grid-button">
-                    <button (click)="cartGame(game.id)">Add to cart</button>
+                    <button (click)="cartGame(game)">Add to cart</button>
                 </div>
                 <!--
                 <div *nfIf="onprofile; else none" class="game-grid-button">
@@ -46,7 +46,7 @@
                     </ul>
                 </div>
                 <div>
-                    <button (click)="cartGame(game.id)">Add to cart</button>
+                    <button (click)="cartGame(game)">Add to cart</button>
                 </div>
                 
             </div>

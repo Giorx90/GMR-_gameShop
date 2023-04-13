@@ -16,6 +16,7 @@ export class CartComponent {
   user:any = {}
   total: number = 0
   id: number = 0
+  i: number = 0
 
   constructor(private authService: AuthService, private storeService:StoreService, private router: Router){}
 
@@ -24,25 +25,37 @@ export class CartComponent {
 
     this.storeService.getCartGames(this.user.id).subscribe((data:any)=>{
       this.games = data.cart   
-      console.log(this.games);
       this.total = this.games.reduce((acc, game) => acc + game.price, 0)
-    })
-
-      
+    })      
 
   }
 
-  deleteCartGame(id:number){
-    console.log(this.game);
-    console.log(this.user.id);
-    
-    
-    //this.storeService.deleteCartGame(this.user.id, this.game)((data: any)=>{
-    //})
+  deleteCartGame(i: number){
+    this.storeService.getUserCart(this.user).subscribe((user:any)=>{
+      const cart = user.cart     
+      cart.splice(i, 1)
+      this.storeService.deleteGameFromCart(this.user, cart).subscribe((data:any)=>{
+      })
+    })
   }
 
   pay(){
     alert("Payment succesful!")
+    //buy games
+    this.storeService.getUserCart(this.user).subscribe((user:any)=>{
+      const games = user.games
+      const cart = user.cart
+      const newGames = [...games, ...cart] 
+      this.storeService.buyGames(this.user, newGames).subscribe((data: any)=>{
+      })
+    })
+    //clear cart
+    this.storeService.getUserCart(this.user).subscribe((user:any)=>{
+      const cart = user.cart     
+      cart.splice(0, cart.length)
+      this.storeService.clearCart(this.user, cart).subscribe((data:any)=>{
+      })
+    })
     this.router.navigateByUrl("/profile")
   }
 }

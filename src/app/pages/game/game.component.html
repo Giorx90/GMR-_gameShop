@@ -6,7 +6,7 @@
         <p class="developer">Developer: {{game.developer}}</p>
         <p class="price">{{game.price}}</p>
         <p class="rating"><img src="../../../assets/images/star.png" alt="">{{game.rating}}</p>
-        <button>Add to cart</button>
+        <button (click)="cartGame(game)">Add to cart</button>
         <button routerLink="/">Back</button>
     </div>
 </div>

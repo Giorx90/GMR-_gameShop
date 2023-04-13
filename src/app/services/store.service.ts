@@ -26,47 +26,50 @@ export class StoreService {
     img: ""
   }
 
+  //games/game components
+
   getGames() {
-    return this.http.get(this.store_url) //Funciona
+    return this.http.get(this.store_url) 
   }
 
   getGame(gameId:number){
-    return this.http.get(`${this.store_url}/${gameId}`) //Funciona
+    return this.http.get(`${this.store_url}/${gameId}`) 
   }
 
-  addGameToCart(game: any, user:any){
-    this.http.get(`${this.user_url}/${user.id}`).subscribe((data:any)=>{
-      const user = data
-      const  cart = user.cart
-      cart.push(game)
-      return this.http.patch(`${this.user_url}/${user.id}`, {cart: cart}) //No funciona
-    })
-    
-   
+  getUserCart(user:any){
+    return this.http.get(`${this.user_url}/${user.id}`) 
   }
+
+  addGameToCart(user: any, newCart:any){
+    return this.http.patch(`${this.user_url}/${user.id}`, {cart: newCart}) 
+  }
+
+  //cart component
 
   getCartGames(userId:number){
-    return this.http.get(`${this.user_url}/${userId}?cart`) //Funciona
+    return this.http.get(`${this.user_url}/${userId}`) 
   }
 
-  deleteCartGame(userId:number, game: any){
-    return this.http.delete(`${this.user_url}/${userId}`, game) //No funciona
+  deleteGameFromCart(user: any, newCart:any){
+    return this.http.patch(`${this.user_url}/${user.id}`, {cart: newCart}) 
   }
   
-  deleteAllCartGames(userId:number){
-    return this.http.delete(`${this.user_url}/${userId}/cart`) //No funciona
+  clearCart(user: any, newCart:any){
+    return this.http.patch(`${this.user_url}/${user.id}`, {cart: newCart}) 
   }
 
-  buyGame(game: FormateGame, userId:number){
-    return this.http.post(`${this.user_url}/${userId}/games`, game) //No funciona
+  buyGames(user: any, newGames:any){
+    return this.http.patch(`${this.user_url}/${user.id}`, {games: newGames}) 
   }
+
+  //profile component
 
   getProfileGames(userId:number){
-    return this.http.get(`${this.user_url}/${userId}?games`) //Funciona
+    return this.http.get(`${this.user_url}/${userId}`) 
   }
   
-  deleteProfileGame(gameId: number, userId:number){
-    return this.http.delete(`${this.user_url}/${userId}/games/${gameId}`) //No funciona
+  deleteGameFromProfile(user: any, newGames:any){
+    return this.http.patch(`${this.user_url}/${user.id}`, {games: newGames}) 
   }
 
 }
