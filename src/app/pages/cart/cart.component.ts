@@ -36,6 +36,8 @@ export class CartComponent {
       cart.splice(i, 1)
       this.storeService.deleteGameFromCart(this.user, cart).subscribe((data:any)=>{
       })
+      this.games.splice(i,1)
+      this.total = this.games.reduce((acc, game) => acc + game.price, 0)
     })
   }
 

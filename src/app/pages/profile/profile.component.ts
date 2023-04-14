@@ -26,8 +26,8 @@ export class ProfileComponent {
     })
   }
 
-  download(){
-    this.downloaded=false
+  download(game: FormateGame){
+    game.downloaded=true
   }
 
   deleteProfileGame(i: number){
@@ -36,6 +36,7 @@ export class ProfileComponent {
       games.splice(i, 1)
       this.storeService.deleteGameFromProfile(this.user, games).subscribe((data:any)=>{
       })
+      this.games.splice(i, 1)
     })
   }
 }

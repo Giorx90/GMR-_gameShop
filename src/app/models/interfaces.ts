@@ -7,6 +7,7 @@ export interface FormateGame {
     price: number,
     rating: number,
     img: string
+    downloaded: boolean
 }
 export interface FormateUser {
     email: string,
