@@ -1,0 +1,267 @@
+{
+  "store": [
+    {
+      "id": 1,
+      "title": "Hogwarts Legacy",
+      "platform": [
+        "PC",
+        "PLay Station 5",
+        "XBOX X series"
+      ],
+      "gender": [
+        "RPG",
+        "Action"
+      ],
+      "developer": "Avalanche Software",
+      "price": 59.99,
+      "rating": 9,
+      "img": "https://cdn-products.eneba.com/resized-products/pWjtGdm5_gHCDbrLlHo_OtPbUsin7dyCzylQ0snaSoM_350x200_1x-0.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Pokemon Arceus",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "gender": [
+        "RPG"
+      ],
+      "developer": "Nintendo",
+      "price": 49.99,
+      "rating": 8,
+      "img": "https://media.vandal.net/m/96931/leyendas-pokemon-arceus-202152616392725_1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Star Wars Jedi: Fallen Order",
+      "platform": [
+        "PC",
+        "PLay Station 5",
+        "XBOX X series"
+      ],
+      "gender": [
+        "RPG",
+        "Action"
+      ],
+      "developer": "Electronic Arts",
+      "price": 29.99,
+      "rating": 9,
+      "img": "https://cdn-products.eneba.com/resized-products/VrHnf2r1IX2yFJkyfSD94fiKQ5ynw05QHA_kxak6Rck_350x200_1x-0.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "Oxygen Not Included",
+      "platform": [
+        "PC"
+      ],
+      "gender": [
+        "Simulation",
+        "Strategy"
+      ],
+      "developer": "Klei Entertaiment",
+      "price": 18.99,
+      "rating": 8,
+      "img": "https://upload.wikimedia.org/wikipedia/en/f/f6/Oxygen_Not_Included_cover_art.jpg"
+    },
+    {
+      "id": 5,
+      "title": "The Sims 4",
+      "platform": [
+        "PC"
+      ],
+      "gender": [
+        "Simulation"
+      ],
+      "developer": "Electronic Arts",
+      "price": 29.99,
+      "rating": 7,
+      "img": "https://cdn1.epicgames.com/offer/2a14cf8a83b149919a2399504e5686a6/SIMS4_EPIC_PORTRAIT-Product-Image_1200x1600_1200x1600-aab8b38d851dbd96bcba41d6507d3a32"
+    },
+    {
+      "id": 6,
+      "title": "XCOM: Enemy Unknown",
+      "platform": [
+        "PC",
+        "PLay Station 5",
+        "XBOX X series"
+      ],
+      "gender": [
+        "Strategy",
+        "Action"
+      ],
+      "developer": "Avalanche Software",
+      "price": 12.99,
+      "rating": 9,
+      "img": "https://cdn-products.eneba.com/resized-products/UwlLllS_350x200_1x-0.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Subnautica",
+      "platform": [
+        "PC",
+        "PLay Station 5",
+        "XBOX X series",
+        "Nintendo Switch"
+      ],
+      "gender": [
+        "Exploration",
+        "Action"
+      ],
+      "developer": "Avalanche Software",
+      "price": 22.99,
+      "rating": 9,
+      "img": "https://cdn-products.eneba.com/resized-products/bHYWo1uePRYfhv2EyYMPtZQxmSSJKJAcX6ZeUagxVoM_350x200_1x-0.jpeg"
+    },
+    {
+      "id": 8,
+      "title": "Zelda: Breath of the Wild",
+      "platform": [
+        "Nintendo Switch"
+      ],
+      "gender": [
+        "RPG"
+      ],
+      "developer": "Avalanche Software",
+      "price": 59.99,
+      "rating": 10,
+      "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91jvZUxquKL._AC_SL1500_.jpg"
+    },
+    {
+      "id": 9,
+      "title": "The Witcher 3",
+      "platform": [
+        "PC",
+        "PLay Station 5",
+        "XBOX X series",
+        "Nintendo Switch"
+      ],
+      "gender": [
+        "RPG",
+        "Action"
+      ],
+      "developer": "CD Project Red",
+      "price": 24.99,
+      "rating": 9,
+      "img": "https://cdn-products.eneba.com/resized-products/eeKzEVbDCxhCyIAt53bbLDvjFmWXvBAec1HVYxyYLN8_350x200_1x-0.jpeg"
+    },
+    {
+      "id": 10,
+      "title": "Final Fantasy XV",
+      "platform": [
+        "PC",
+        "Play Station 5",
+        "XBOX X series"
+      ],
+      "gender": [
+        "RPG",
+        "Action"
+      ],
+      "developer": "Square Enix",
+      "price": 29.99,
+      "rating": 9,
+      "img": "https://cdn-products.eneba.com/resized-products/JdsdNPx_350x200_1x-0.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Gotham Knights",
+      "platform": [
+        "PC",
+        "Play Station 5"
+      ],
+      "gender": [
+        "Action"
+      ],
+      "developer": "Warner Bros",
+      "price": 59.99,
+      "rating": 7,
+      "img": "https://cdn-products.eneba.com/resized-products/IvJLE6HL3WhMtSCXUZPU24prh6kQQzWCQ2ZHuZw8TjQ_350x200_1x-0.jpg"
+    },
+    {
+      "id": 12,
+      "title": "resident Evil 4",
+      "platform": [
+        "PC",
+        "Play Station 5"
+      ],
+      "gender": [
+        "Action",
+        "Horror"
+      ],
+      "developer": "Capcom",
+      "price": 39.99,
+      "rating": 9,
+      "img": "https://cdn-products.eneba.com/resized-products/jkycDPvdEtYf36g85ZOxUqV3oV8ktM1SbHzKElMAjPU_350x200_1x-0.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Deathloop",
+      "platform": [
+        "PC",
+        "Play Station 5",
+        "XBOX X series"
+      ],
+      "gender": [
+        "Action"
+      ],
+      "developer": "Arkane Studios",
+      "price": 39.99,
+      "rating": 8,
+      "img": "https://cdn-products.eneba.com/resized-products/22zugg92PQ3xaTj8iBxBnYav1JQudDnPV1FAZEzVhMA_350x200_1x-0.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Call of Duty: Modern Warfare II",
+      "platform": [
+        "PC",
+        "Play Station 5",
+        "XBOX X series"
+      ],
+      "gender": [
+        "Action"
+      ],
+      "developer": "Activision",
+      "price": 39.99,
+      "rating": 7,
+      "img": "https://cdn-products.eneba.com/resized-products/0Uf-bRh-otADyoqS33w_EQWIwrgx4KRDbZTbrHt2dz8_350x200_1x-0.jpg"
+    },
+    {
+      "id": 15,
+      "title": "far Cry 6",
+      "platform": [
+        "PC",
+        "Play Station 5",
+        "XBOX X series"
+      ],
+      "gender": [
+        "Action",
+        "RPG"
+      ],
+      "developer": "Ubisoft",
+      "price": 39.99,
+      "rating": 7,
+      "img": "https://cdn-products.eneba.com/resized-products/Lf40me6VgkA3JP0iElx50sKLIZb0LASChqHdm4gVo7w_350x200_1x-0.jpg"
+    }
+  ],
+  "users": [
+    {
+      "email": "jorge@mail.com",
+      "password": "$2a$10$Nfkx/XKFgdvHKv34rAoVH.FNsyOhpTN/0bkwJsPz.M.F4xLQrmCjW",
+      "firstname": "Jorge",
+      "lastname": "Maldonado",
+      "age": 32,
+      "cart": [],
+      "games": [],
+      "id": 1
+    },
+    {
+      "email": "alex@mail.com",
+      "password": "$2a$10$jAsw8yJ4A3r2MEA6zAXOEeVi4UFdLaP2JHHuRsy3f8twFL8Wwzd0O",
+      "firstname": "Alex",
+      "lastname": "Rojas",
+      "age": 35,
+      "cart": [],
+      "games": [],
+      "id": 2
+    }
+  ]
+}
