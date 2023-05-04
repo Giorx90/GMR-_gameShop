@@ -242,26 +242,5 @@
       "img": "https://cdn-products.eneba.com/resized-products/Lf40me6VgkA3JP0iElx50sKLIZb0LASChqHdm4gVo7w_350x200_1x-0.jpg"
     }
   ],
-  "users": [
-    {
-      "email": "jorge@mail.com",
-      "password": "$2a$10$Nfkx/XKFgdvHKv34rAoVH.FNsyOhpTN/0bkwJsPz.M.F4xLQrmCjW",
-      "firstname": "Jorge",
-      "lastname": "Maldonado",
-      "age": 32,
-      "cart": [],
-      "games": [],
-      "id": 1
-    },
-    {
-      "email": "alex@mail.com",
-      "password": "$2a$10$jAsw8yJ4A3r2MEA6zAXOEeVi4UFdLaP2JHHuRsy3f8twFL8Wwzd0O",
-      "firstname": "Alex",
-      "lastname": "Rojas",
-      "age": 35,
-      "cart": [],
-      "games": [],
-      "id": 2
-    }
-  ]
+  "users": []
 }
