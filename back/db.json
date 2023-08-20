@@ -242,5 +242,48 @@
       "img": "https://cdn-products.eneba.com/resized-products/Lf40me6VgkA3JP0iElx50sKLIZb0LASChqHdm4gVo7w_350x200_1x-0.jpg"
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "jorge@mail.com",
+      "password": "$2a$10$aUn7uCl4zVbWNEYsmZnKNO7vyfV8L6L5cDN.9EAZ1u5hVTjkqHrR6",
+      "firstname": "Jorge",
+      "lastname": "M",
+      "age": 33,
+      "cart": [],
+      "games": [
+        {
+          "id": 2,
+          "title": "Pokemon Arceus",
+          "platform": [
+            "Nintendo Switch"
+          ],
+          "gender": [
+            "RPG"
+          ],
+          "developer": "Nintendo",
+          "price": 49.99,
+          "rating": 8,
+          "img": "https://media.vandal.net/m/96931/leyendas-pokemon-arceus-202152616392725_1.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Star Wars Jedi: Fallen Order",
+          "platform": [
+            "PC",
+            "PLay Station 5",
+            "XBOX X series"
+          ],
+          "gender": [
+            "RPG",
+            "Action"
+          ],
+          "developer": "Electronic Arts",
+          "price": 29.99,
+          "rating": 9,
+          "img": "https://cdn-products.eneba.com/resized-products/VrHnf2r1IX2yFJkyfSD94fiKQ5ynw05QHA_kxak6Rck_350x200_1x-0.jpeg"
+        }
+      ],
+      "id": 1
+    }
+  ]
 }
